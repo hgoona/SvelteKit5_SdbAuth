@@ -2,7 +2,13 @@ import Surreal, {  type Token } from 'surrealdb';
 
 // const endpoint = 'ws://localhost:3001/rpc';
 // const endpoint = 'ws://localhost:8000/rpc';
-const endpoint = 'wss://myAppName.fly.dev:443/rpc';
+// const endpoint = 'wss://myAppName.fly.dev:443/rpc';
+
+import {
+	VITE_SURREAL_ADDRESS_COMPLETE
+} from "$env/static/private";
+
+const endpoint = VITE_SURREAL_ADDRESS_COMPLETE;
 const namespace = 'test2';
 const database = 'test2';
 
